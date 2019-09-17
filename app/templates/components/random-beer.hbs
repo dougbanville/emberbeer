@@ -1,0 +1,7 @@
+<h1>Random Beer! {{ beer.name }} {{periodicFetch.isRunning}}</h1>
+{{#if run}}
+  <button {{ action "cancelTask"}}>Stop this nonsense</button>
+{{else}}
+  <button {{ action "startTask"}}>Start this nonsense</button>
+{{/if}}
+<img src={{ beer.image_url }} alt="">

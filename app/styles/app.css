@@ -1,0 +1,15 @@
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: stretch;
+}
+.flex-grid-thirds > * {
+  margin-bottom: 1rem;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+}
+img {
+  max-height: 300px;
+}
