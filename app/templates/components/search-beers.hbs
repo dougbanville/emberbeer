@@ -1,0 +1,9 @@
+{{input value=keyword input=(perform performSearch)}}
+{{#if results}}
+  <h1>Found {{results.length}}</h1>
+  <ul>
+    {{#each results as |beer|}}
+      <li><img src="{{beer.image_url}}" alt=""> {{ beer.name }}</li>
+    {{/each}}
+  </ul>
+{{/if}}

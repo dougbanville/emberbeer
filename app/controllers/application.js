@@ -2,6 +2,10 @@ import Controller from "@ember/controller";
 import { task, timeout } from "ember-concurrency";
 
 export default Controller.extend({
+  queryParams: ["beer_name"],
+
+  beer_name: null,
+
   interval: 3000,
 
   randomBeers: task(function*() {
