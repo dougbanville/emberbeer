@@ -1,0 +1,10 @@
+<h1>Search</h1>
+<input type="text" value={{ beer_name}} oninput={{ action (mut beer_name) value="target.value"}}>
+
+{{ model.length }}
+<ul>
+  {{#each model as |beer|}}
+    <li>{{ beer.name }}</li>
+  {{/each}}
+</ul>
+{{outlet}}

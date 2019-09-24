@@ -1,15 +1,1 @@
-<h1>Beers {{model.length}} {{ randomBeers.isRunning }}</h1>
-<SearchBeers />
-<button {{ action "getBeer"}}>Get Beer</button>
-{{#if randomBeer }}
-  {{ input value=interval }}
-  <RandomBeer @beer={{ randomBeer }} @task={{randomBeers}} @interval={{ interval }} />
-{{/if}}
-<div class="flex-grid-thirds">
-  {{#each model as |beer| }}
-    <div class="col">
-      <h1>{{ beer.name}}</h1>
-      <img src="{{ beer.image_url }}" alt="">
-    </div>
-  {{/each}}
-</div>
+{{ outlet }}

@@ -1,0 +1,7 @@
+{{#g-map lat=lat lng=long zoom=16 as |g|}}
+  {{g.marker
+      lat=lat
+      lng=long
+      onClick=(action "markerClick")
+      }}
+{{/g-map}}
