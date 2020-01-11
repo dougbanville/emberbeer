@@ -1,11 +1,9 @@
 import Component from "@ember/component";
 import { computed } from "@ember/object";
 
-import { A } from "@ember/array";
-
 export default Component.extend({
-  chartData: computed("model", function() {
-    //return this.model;
+  @computed("model")
+  get chartData() {
     const charted = [];
     this.model.map(r => {
       charted.push({ name: r.name, y: r.abv });
@@ -30,9 +28,9 @@ export default Component.extend({
         ]
       }
     ];
-  }),
+  },
 
-  chartOptions: computed("model", function() {
+  get chartOptions() {
     const chartOptions = {
       chart: {
         type: "area"
@@ -51,5 +49,5 @@ export default Component.extend({
       theme: "defaultTheme"
     };
     return chartOptions;
-  })
+  }
 });
