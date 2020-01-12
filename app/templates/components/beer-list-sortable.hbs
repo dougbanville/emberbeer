@@ -1,0 +1,26 @@
+{{!-- <div class="flex-grid-thirds" id="grid" {{ did-insert this.makeDraggable}}>
+  {{#each @model as |beer| }}
+    <div class="col" draggable="true" {{on "dragend" this.saveState}}>
+      <h1>{{ beer.name}}</h1>
+      <img src={{ beer.image_url }} alt="">
+    </div>
+  {{/each}}
+</div> --}}
+
+<div class="flex-grid-thirds">
+  <SortableGroup @model={{@model}} @direction="x" class="col" onChange={{action "reorderItems"}} as |Group|>
+    {{!-- {{#sortable-group model=@model direction="x" tagName="div" className="col" onChange=(action "reorderItems") as |group|}} --}}
+    {{#each group.model as |modelItem|}}
+      {{!-- {{#group.item class="col" model=modelItem as |item|}} --}}
+      <Group.Item @class="col" @model={{modelItem}} as |Item|>
+        {{#item.handle}}
+          <div class="col">
+            <h1>{{ modelItem.name}}</h1>
+            <img src={{ modelItem.image_url }} alt="">
+          </div>
+        {{/item.handle}}
+      </Group.Item>
+      {{!-- {{/group.item}} --}}
+    {{/each}}
+  </SortableGroup>
+</div>
