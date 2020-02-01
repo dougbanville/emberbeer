@@ -1,0 +1,9 @@
+<h1>{{@model.length}} Beers</h1>
+{{#each @model as |beer|}}
+  {{#let (component beer.template) as |Template|}}
+  <Template @beer={{beer}} />
+  {{/let}}
+{{/each}}
+{{!-- {{#each @model as |beer|}}
+  {{component beer.template beer=beer}}
+{{/each}} --}}

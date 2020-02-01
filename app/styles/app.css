@@ -1,3 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 .flex-grid-thirds {
   display: flex;
   justify-content: space-between;
