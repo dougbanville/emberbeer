@@ -10,4 +10,5 @@ Router.map(function() {
   this.route('search');
   this.route('chart');
   this.route('run-time-components');
+  this.route('class');
 });

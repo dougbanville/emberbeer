@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { action } from '@ember/object';
 
-export default Route.extend({
+export default class RunTimeComponents extends Route{
 
   model() {
     return fetch("https://api.punkapi.com/v2/beers")
@@ -16,12 +16,11 @@ export default Route.extend({
         })
         return beers;
       });
-  },
-
-  actions:{
-    changeWrapper(){
-      alert('oi')
-    }
+  }
+  @action
+  someAction(){
+    alert('Doug is cool')
   }
 
-});
+}
+
