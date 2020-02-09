@@ -1,9 +1,11 @@
 <header>
   <div class="container mx-auto">
-    <LinkTo @route="index">Home</LinkTo>
+    <AppHeader />
+    <LinkTo @route="index">Home {{now}}</LinkTo>
     <LinkTo @route="chart">Strength Chart</LinkTo>
     <LinkTo @route="run-time-components">Run Time Components</LinkTo>
     <span {{myModifier}}></span>
+    <button {{action "changeTz"}}>Change TZ {{moment-format "2017-09-03T20:00:00Z" "hh:mm"}}</button>
   </div>
 </header>
   <div class="container mx-auto">

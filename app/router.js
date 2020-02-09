@@ -11,4 +11,5 @@ Router.map(function() {
   this.route('chart');
   this.route('run-time-components');
   this.route('class');
+  this.route('compare');
 });

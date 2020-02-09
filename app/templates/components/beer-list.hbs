@@ -2,9 +2,5 @@
 <div class="flex-grid-thirds" id="grid" {{ did-insert this.makeDraggable}}>
   {{#each @model as |beer| }}
     <BeerList::Beer @beer={{beer}} draggable="true" {{on "dragend" this.saveState}}/>
-    {{!-- <div class="col" draggable="true" {{on "dragend" this.saveState}}>
-      <h1>{{ beer.name}}</h1>
-      <img src={{ beer.image_url }} alt={{ beer.name}}>
-    </div> --}}
   {{/each}}
 </div>
